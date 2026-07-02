@@ -3,11 +3,20 @@
 # Ask Doubt on telegram @KingVJ01
 
 import openai
+from info import OPENAI_API
 
 async def ai(query):
-    openai.api_key = "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" #Your openai api key
-    response = openai.Completion.create(engine="text-davinci-002", prompt=query, max_tokens=100, n=1, stop=None, temperature=0.9, timeout=5)
-    return response.choices[0].text.strip()
+    openai.api_key = OPENAI_API
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[
+            {"role": "system", "content": "You are a helpful movie assistant bot. Provide concise responses."},
+            {"role": "user", "content": query}
+        ],
+        max_tokens=150,
+        temperature=0.7
+    )
+    return response.choices[0].message.content.strip()
      
 async def ask_ai(client, m, message):
     try:
