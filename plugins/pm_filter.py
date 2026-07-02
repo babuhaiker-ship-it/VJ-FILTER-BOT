@@ -1929,15 +1929,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
              InlineKeyboardButton('📺 ꜱᴛʀᴇᴀᴍ', callback_data='s_txt'),
              InlineKeyboardButton('📦 ꜰɪʟᴇ ꜱᴛᴏʀᴇ', callback_data='store_file')
          ], [
-             InlineKeyboardButton('🔗 ᴄᴏɴɴᴇᴄᴛ', callback_data='coct'),
-             InlineKeyboardButton('✨ ꜰɪʟᴛᴇʀꜱ', callback_data='filters')
+             InlineKeyboardButton('📥 ᴛᴏʀʀᴇɴᴛ', callback_data='torrent_help'),
+             InlineKeyboardButton('🔗 ᴄᴏɴɴᴇᴄᴛ', callback_data='coct')
          ], [
-             InlineKeyboardButton('🎵 ᴍᴜꜱɪᴄ', callback_data='song'),
-             InlineKeyboardButton('📹 ᴠɪᴅᴇᴏ', callback_data='ytdl')
+             InlineKeyboardButton('✨ ꜰɪʟᴛᴇʀꜱ', callback_data='filters'),
+             InlineKeyboardButton('🎵 ᴍᴜꜱɪᴄ', callback_data='song')
          ], [
-             InlineKeyboardButton('⚙️ ꜱᴇᴛᴛɪɴɢꜱ', callback_data='extra'),
-             InlineKeyboardButton('ℹ️ ᴀʙᴏᴜᴛ', callback_data='about')
+             InlineKeyboardButton('📹 ᴠɪᴅᴇᴏ', callback_data='ytdl'),
+             InlineKeyboardButton('⚙️ ꜱᴇᴛᴛɪɴɢꜱ', callback_data='extra')
          ], [
+             InlineKeyboardButton('ℹ️ ᴀʙᴏᴜᴛ', callback_data='about'),
              InlineKeyboardButton('🏠 ʀᴇᴛᴜʀɴ ʜᴏᴍᴇ', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -1948,6 +1949,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
         await query.message.edit_text(
             text=script.HELP_TXT.format(mention=query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+
+    elif query.data == "torrent_help":
+        buttons = [[
+            InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='help')
+        ]]
+        await client.edit_message_media(
+            query.message.chat.id,
+            query.message.id,
+            InputMediaPhoto(random.choice(PICS))
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.TORRENT_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )

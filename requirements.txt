@@ -39,3 +39,5 @@ dnspython==2.3.0
 ffmpeg-python>=0.2.0
 openai==0.25.0
 git+https://github.com/cinemagoer/cinemagoer
+aria2p
+torrent-tool

@@ -772,6 +772,16 @@ Also your tutorial will be Added Your Group..."""
 ◈ ᴄᴏᴍᴍᴀɴᴅ: <code>/stream</code> (ʀᴇᴘʟʏ ᴛᴏ ꜰɪʟᴇ)</b>
 """
 
+    TORRENT_TXT = """
+<b><blockquote>📥 ᴛᴏʀʀᴇɴᴛ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ</blockquote>
+
+ᴅᴏᴡɴʟᴏᴀᴅ ᴀɴʏ ꜰɪʟᴇ ᴠɪᴀ ᴛᴏʀʀᴇɴᴛ/ᴍᴀɢɴᴇᴛ ᴅɪʀᴇᴄᴛʟʏ ᴛᴏ ᴛᴇʟᴇɢʀᴀᴍ.
+
+◈ ᴄᴏᴍᴍᴀɴᴅ: <code>/torrent</code> (ᴍᴀɢɴᴇᴛ ʟɪɴᴋ ᴏʀ ʀᴇᴘʟʏ ᴛᴏ .ᴛᴏʀʀᴇɴᴛ ꜰɪʟᴇ)
+
+<blockquote>ᴀᴅᴍɪɴꜱ ᴏɴʟʏ!</blockquote></b>
+"""
+
 
 # Don't Remove Credit @VJ_Bots
 # Subscribe YouTube Channel For Amazing Bot @Tech_VJ

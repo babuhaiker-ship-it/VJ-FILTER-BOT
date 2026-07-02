@@ -16,6 +16,11 @@ API_HASH = environ.get('API_HASH', '')
 BOT_TOKEN = environ.get('BOT_TOKEN', "")
 OPENAI_API = environ.get('OPENAI_API', "")
 
+# Aria2 Configuration
+ARIA2_HOST = environ.get('ARIA2_HOST', 'http://localhost')
+ARIA2_PORT = int(environ.get('ARIA2_PORT', '6800'))
+ARIA2_SECRET = environ.get('ARIA2_SECRET', '')
+
 
 # This Pictures Is For Start Message Picture, You Can Add Multiple By Giving One Space Between Each.
 PICS = (environ.get('PICS', 'https://graph.org/file/ce1723991756e48c35aa1.jpg')).split()
